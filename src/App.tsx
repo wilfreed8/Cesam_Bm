@@ -1,30 +1,23 @@
-import { useState } from 'react'
+import "./App.css";
+import Etudiant from "./pages/Etudiant";
+import Home from "./Home";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
-import './App.css'
-import Etudiant from './pages/Etudiant'
-import Home from './Home'
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import { Layout } from 'lucide-react'
-import About from './pages/About'
-import PhoneNavbar from './components/phoneNavbar'
-
+import About from "./pages/About";
+import PhoneNavbar from "./components/phoneNavbar";
 
 function App() {
-
-
   return (
     <BrowserRouter>
-    <PhoneNavbar/>
+      <PhoneNavbar />
       <Routes>
-        <Route index element={<Home/>}/>
-        <Route path="/Home" element={<Home/>}/>
-        <Route path="/Etudiant" element={<Etudiant/>}/>
-        <Route path="/A propos" element={<About/>}/>
+        <Route index element={<Home />} />
+        <Route path="/Home" element={<Home />} />
+        <Route path="/Etudiant" element={<Etudiant />} />
+        <Route path="/A propos" element={<About />} />
       </Routes>
-      </BrowserRouter>
-    
-   
-  )
+    </BrowserRouter>
+  );
 }
 
-export default App
+export default App;

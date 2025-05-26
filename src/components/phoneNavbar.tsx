@@ -1,8 +1,6 @@
 import clsx from "clsx";
-import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 import Logo from "./ui/logo";
-
-import React from "react";
 
 const phoneNavbar = () => {
   return (
@@ -84,8 +82,7 @@ const phoneNavbar = () => {
                       </li>
                     </div>
                     <div>
-                      <div className="flex flex-col items-center md:flex-row gap-1 ">
-                      </div>
+                      <div className="flex flex-col items-center md:flex-row gap-1 "></div>
                     </div>
                   </ul>
                 </div>
