@@ -5,7 +5,7 @@ const Logo = () => {
       data-theme="cmyk"
     >
       <img
-        src="images/cesam.jpg" // Mets le bon chemin ici
+        src="cesam.jpg" // Mets le bon chemin ici
         alt="logocesam"
         width={24}
         height={24}
