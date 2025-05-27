@@ -2,28 +2,28 @@ const testimonials = [
   {
     name: "Nat Reynolds",
     role: "PDG",
-    image: "src/assets//chargeScientifique.jpg",
+    image: "public/images//chargeScientifique.jpg",
     text: "Vitae suscipit tellus mauris a diam maecenas sed enim ut. Mauris augue neque gravida in fermentum. Praesent semper feugiat nibh sed pulvinar proin.",
     color: "text-gray-800",
   },
   {
     name: "Céla Almeda",
     role: "Secrétaire",
-    image: "src/assets//chargeScientifique.jpg",
+    image: "public/images//chargeScientifique.jpg",
     text: "Pharetra vel turpis nunc eget lorem. Quisque id diam vel quam elementum pulvinar etiam. Urna porttitor rhoncus dolor non enim praesent elementum.",
     color: "text-emerald-600",
   },
   {
     name: "Bob Roberts",
     role: "Directeur commercial",
-    image: "src/assets//chargeScientifique.jpg",
+    image: "public/images//chargeScientifique.jpg",
     text: "Mauris augue neque gravida in fermentum. Praesent semper feugiat nibh sed pulvinar proin. Nibh nisl dictumst vestibulum rhoncus est pellentesque elit.",
     color: "text-green-600",
   },
   {
     name: "Mattie Smith",
     role: "Comptable-auditeur",
-    image: "src/assets//chargeScientifique.jpg",
+    image: "public/images//chargeScientifique.jpg",
     text: "Nisl condimentum id venenatis a gravida in fermentum. Praesent semper feugiat nibh sed pulvinar proin. Nibh nisl condimentum id venenatis a condimentum.",
     color: "text-green-600",
   },
@@ -49,7 +49,7 @@ export default function Home() {
             <div className="flex justify-center  ">
               <div className="flex justify-center rounded-full w-40 h-40 bg-blue-400 md:w-50 md:h-50">
                 <img
-                  src="src/assets/chargeScientifique.jpg"
+                  src="public/images/chargeScientifique.jpg"
                   alt="president"
                   width={80}
                   height={80}
@@ -103,16 +103,7 @@ export default function Home() {
             </div>
           ))}
         </div>
-        <p className="mt-10 text-sm text-gray-400">
-          Images de{" "}
-          <a
-            href="https://www.freepik.com"
-            target="_blank"
-            className="underline"
-          >
-            Freepik
-          </a>
-        </p>
+        
       </div>
     </section>
     </div>

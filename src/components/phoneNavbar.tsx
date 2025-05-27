@@ -59,7 +59,7 @@ const phoneNavbar = () => {
                             "btn btn-ghost btn-info w-40 md:w-auto  p-1 md:p-4 font-bold hover:text-white md:text-xl text-sm rounded-0 md:rounded-2xl transition-colors duration-200",
                             {
                               "hover:text-white bg-blue-800 text-white":
-                                location.pathname === "/events",
+                                location.pathname === "/Etudiant",
                             }
                           )}
                         >
@@ -72,8 +72,8 @@ const phoneNavbar = () => {
                           className={clsx(
                             "btn btn-ghost btn-info w-40 md:w-auto p-1 md:p-4 font-bold md:text-xl hover:text-white text-sm rounded-0 md:rounded-2xl transition-colors duration-200",
                             {
-                              "hover:text-white bg-blue-800 text-white py-0":
-                                location.pathname === "/announcements",
+                              "hover:text-white bg-blue-800 text-white ":
+                                location.pathname === "/About",
                             }
                           )}
                         >
