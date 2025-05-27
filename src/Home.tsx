@@ -2,28 +2,28 @@ const testimonials = [
   {
     name: "Nat Reynolds",
     role: "PDG",
-    image: "public/images//chargeScientifique.jpg",
+    image: "images//chargeScientifique.jpg",
     text: "Vitae suscipit tellus mauris a diam maecenas sed enim ut. Mauris augue neque gravida in fermentum. Praesent semper feugiat nibh sed pulvinar proin.",
     color: "text-gray-800",
   },
   {
     name: "Céla Almeda",
     role: "Secrétaire",
-    image: "public/images//chargeScientifique.jpg",
+    image: "images//chargeScientifique.jpg",
     text: "Pharetra vel turpis nunc eget lorem. Quisque id diam vel quam elementum pulvinar etiam. Urna porttitor rhoncus dolor non enim praesent elementum.",
     color: "text-emerald-600",
   },
   {
     name: "Bob Roberts",
     role: "Directeur commercial",
-    image: "public/images//chargeScientifique.jpg",
+    image: "images//chargeScientifique.jpg",
     text: "Mauris augue neque gravida in fermentum. Praesent semper feugiat nibh sed pulvinar proin. Nibh nisl dictumst vestibulum rhoncus est pellentesque elit.",
     color: "text-green-600",
   },
   {
     name: "Mattie Smith",
     role: "Comptable-auditeur",
-    image: "public/images//chargeScientifique.jpg",
+    image: "images//chargeScientifique.jpg",
     text: "Nisl condimentum id venenatis a gravida in fermentum. Praesent semper feugiat nibh sed pulvinar proin. Nibh nisl condimentum id venenatis a condimentum.",
     color: "text-green-600",
   },
@@ -49,7 +49,7 @@ export default function Home() {
             <div className="flex justify-center  ">
               <div className="flex justify-center rounded-full w-40 h-40 bg-blue-400 md:w-50 md:h-50">
                 <img
-                  src="public/images/chargeScientifique.jpg"
+                  src="images/chargeScientifique.jpg"
                   alt="president"
                   width={80}
                   height={80}
