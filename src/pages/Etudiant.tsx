@@ -7,15 +7,13 @@ import { Search } from "lucide-react";
 import { motion } from "framer-motion";
 import { Bounce, toast, ToastContainer } from "react-toastify";
 import { mip } from "@/lib/mip";
-import Dashboard from "@/components/dashboard";
-import { useLocation } from "react-router-dom";
+
 //import { type } from "os";
 //import { useDeviceType } from "../useDeviceType";
 
 export default function DocuFac() {
-  const location = useLocation();
+
   const [search, setSearch] = useState("");
-  const [faculte, setfaculte] = useState(location.pathname.substring(10));
 
   //const [filiere, setFiliere] = useState("");
   //const [semestre, setSemestre] = useState("");
