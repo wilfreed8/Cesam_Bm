@@ -6,15 +6,20 @@ import { Input } from "@/components/ui/input";
 import { Search } from "lucide-react";
 import { motion } from "framer-motion";
 import { Bounce, toast, ToastContainer } from "react-toastify";
-import { modules } from "@/modules";
+import { mip } from "@/lib/mip";
+import Dashboard from "@/components/dashboard";
+import { useLocation } from "react-router-dom";
 //import { type } from "os";
 //import { useDeviceType } from "../useDeviceType";
 
 export default function DocuFac() {
+  const location = useLocation();
   const [search, setSearch] = useState("");
+  const [faculte, setfaculte] = useState(location.pathname.substring(10));
+
   //const [filiere, setFiliere] = useState("");
   //const [semestre, setSemestre] = useState("");
-  const filtered = modules.filter(
+  const filtered = mip.filter(
     (m) =>
       m.name.toLowerCase().includes(search.toLowerCase()) ||
       m.ecole.toLowerCase().includes(search.toLowerCase())
@@ -35,14 +40,9 @@ export default function DocuFac() {
   };
 
   return (
-    <div className="p-4 md:p-10 space-y-6 w-screen bg-white">
+    <div className="p-4 md:p-10 space-y-6 w-screen bg-blue-50">
       <ToastContainer />
-      <header className="text-center space-y-2">
-        <h1 className="text-3xl md:5xl font-bold">DocuFac</h1>
-        <p className="text-gray-600 text-xl">
-          Téléchargez vos documents universitaires par module
-        </p>
-      </header>
+
       <section className="grid grid-cols-1 md:grid-cols-3 gap-4 items-end">
         <div className="relative">
           <Search className="absolute left-2 top-2.5 text-gray-400" size={18} />
@@ -54,7 +54,7 @@ export default function DocuFac() {
             onChange={(e) => setSearch(e.target.value)}
           />
           <datalist id="browsers">
-            {modules.map((mod) => {
+            {mip.map((mod) => {
               return <option key={mod.id} value={mod.name}></option>;
             })}
           </datalist>
@@ -65,11 +65,7 @@ export default function DocuFac() {
       )}
       <section className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-4">
         {filtered.map((mod) => (
-          <motion.div
-            key={mod.id}
-            whileHover={{ scale: 1.02 }}
-            className=""
-          >
+          <motion.div key={mod.id} whileHover={{ scale: 1.02 }} className="">
             <Card className=" border-1 border-amber-50  shadow-sm ">
               <CardContent className="p-4 space-y-2 ">
                 <h2 className="text-lg font-bold">{mod.name}</h2>

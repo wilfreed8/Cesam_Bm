@@ -8,7 +8,7 @@ export interface Module {
   }
 
 
-  export const modules: Module[] = [
+  export const mip: Module[] = [
     {
       id: 1,
       name: "thermodynamyque",

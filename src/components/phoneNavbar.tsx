@@ -1,15 +1,24 @@
 import clsx from "clsx";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import Logo from "./ui/logo";
 
 const phoneNavbar = () => {
+
+
+  let location = useLocation();
+
+  const closeDrawer = () => {
+    const drawer = document.getElementById("my-drawer-3") as HTMLInputElement;
+    if (drawer) drawer.checked = false;
+  };
+
   return (
-    <div className=" w-screen bg-white/30 backdrop-blur-lg sticky top-0 z-100">
-      <div className="drawer">
+    <div className=" w-screen backdrop-blur-lg sticky top-0 z-50">
+      <div className="drawer ">
         <input id="my-drawer-3" type="checkbox" className="drawer-toggle" />
         <div className="drawer-content flex flex-col">
           {/* Navbar */}
-          <div className="navbar bg-white w-full md:15 shadow-md md:h-18">
+          <div className="navbar bg-white/30  backdrop-blur-md w-full md:15 shadow-md md:h-18">
             <div className="flex-none lg:hidden">
               <label
                 htmlFor="my-drawer-3"
@@ -42,7 +51,7 @@ const phoneNavbar = () => {
                         <Link
                           to="/Home"
                           className={clsx(
-                            "btn btn-ghost btn-info w-40 md:w-auto p-1  md:p-4 font-bold md:text-xl text-sm rounded-0 md:rounded-2xl hover:text-white transition-colors duration-200",
+                            "btn btn-ghost btn-info w-40 md:w-auto p-1  md:p-4 font-bold md:text-xl text-sm rounded-0 md:rounded-lg hover:text-white transition-colors duration-200",
                             {
                               "hover:text-white bg-blue-800  text-white":
                                 location.pathname === "/Home",
@@ -54,12 +63,12 @@ const phoneNavbar = () => {
                       </li>
                       <li>
                         <Link
-                          to="/Etudiant"
+                          to="/Etudiant/fstbm"
                           className={clsx(
-                            "btn btn-ghost btn-info w-40 md:w-auto  p-1 md:p-4 font-bold hover:text-white md:text-xl text-sm rounded-0 md:rounded-2xl transition-colors duration-200",
+                            "btn btn-ghost btn-info w-40 md:w-auto  p-1 md:p-4 font-bold hover:text-white md:text-xl text-sm rounded-0 md:rounded-lg transition-colors duration-200",
                             {
                               "hover:text-white bg-blue-800 text-white":
-                                location.pathname === "/Etudiant",
+                              location.pathname.includes("/Etudiant"),
                             }
                           )}
                         >
@@ -70,7 +79,7 @@ const phoneNavbar = () => {
                         <Link
                           to="/About"
                           className={clsx(
-                            "btn btn-ghost btn-info w-40 md:w-auto p-1 md:p-4 font-bold md:text-xl hover:text-white text-sm rounded-0 md:rounded-2xl transition-colors duration-200",
+                            "btn btn-ghost btn-info w-40 md:w-auto p-1 md:p-4 font-bold md:text-xl hover:text-white text-sm rounded-0 md:rounded-lg transition-colors duration-200",
                             {
                               "hover:text-white bg-blue-800 text-white ":
                                 location.pathname === "/About",
@@ -90,26 +99,24 @@ const phoneNavbar = () => {
             </div>
           </div>
         </div>
-        <div className="drawer-side">
+        <div className="drawer-side ">
           <label
             htmlFor="my-drawer-3"
             aria-label="close sidebar"
             className="drawer-overlay"
           ></label>
-          <ul className="menu bg-white min-h-full w-80 items-center gap-2 p-4">
+          <ul className="menu  bg-white  min-h-full w-80 items-center gap-2 p-4">
             {/* Sidebar content here */}
 
             <div className="mt-2">
               <p className="font-semibold text-sm ">
-                Welcome Back cesamDoc
-                <i className="text-blue-500 md:text-xl font-bold uppercase md:mx-2">
-                  cesamDoc
-                </i>
+                Bienvenue sur CesamDoc
               </p>
             </div>
             <li className="w-full ">
               <Link
                 to="/Home"
+                onClick={closeDrawer}
                 className={clsx(
                   "btn btn-soft rounded-md btn-info w-full hover:text-white transition-colors duration-200  p-1   font-semibold  text-sm ",
                   {
@@ -124,12 +131,13 @@ const phoneNavbar = () => {
 
             <li className="w-full">
               <Link
-                to="/Etudiant"
+                to="/Etudiant/fstbm"
+                onClick={closeDrawer}
                 className={clsx(
                   "btn btn-soft btn-info  rounded-md w-full hover:text-white transition-colors duration-200  p-1   font-semibold  text-sm",
                   {
                     "hover:text-white bg-blue-800  btn-primary text-white":
-                      location.pathname === "/Events",
+                      location.pathname.includes("/Etudiant") ,
                   }
                 )}
               >
@@ -140,11 +148,12 @@ const phoneNavbar = () => {
             <li className="w-full mb-10">
               <Link
                 to="/About"
+                onClick={closeDrawer}
                 className={clsx(
                   "btn btn-soft btn-info  rounded-md w-full hover:text-white transition-colors duration-200  p-1   font-semibold  text-sm",
                   {
                     "hover:text-white bg-blue-800  btn-primary text-white py-0":
-                      location.pathname === "/Announcements",
+                      location.pathname === "/About",
                   }
                 )}
               >

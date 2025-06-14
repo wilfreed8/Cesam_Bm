@@ -4,13 +4,13 @@ import Footer from "@/components/footer";
 
 const layout = () => {
   return (
-    <>
+    <div >
       <PhoneNavbar />
-      <main>
+      <main >
         <Outlet />
       </main>
       <Footer/>
-    </>
+    </div>
   );
 };
 
