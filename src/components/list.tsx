@@ -1,7 +1,7 @@
 
 const list = (props:{filiere:string[]}) => {
   return (
-    <div>
+    <div className="">
       <div className="dropdown mb-72">
   <div tabIndex={0} role="button" className="btn m-1">
     <svg

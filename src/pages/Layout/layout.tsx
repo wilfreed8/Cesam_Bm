@@ -4,7 +4,7 @@ import Footer from "@/components/footer";
 
 const layout = () => {
   return (
-    <div >
+    <div className="">
       <PhoneNavbar />
       <main >
         <Outlet />

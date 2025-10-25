@@ -40,7 +40,6 @@ export default function DocuFac() {
   return (
     <div className="p-4 md:p-10 space-y-6 w-screen bg-blue-50">
       <ToastContainer />
-
       <section className="grid grid-cols-1 md:grid-cols-3 gap-4 items-end">
         <div className="relative">
           <Search className="absolute left-2 top-2.5 text-gray-400" size={18} />
@@ -58,6 +57,8 @@ export default function DocuFac() {
           </datalist>
         </div>
       </section>
+      
+      
       {filtered.length == 0 && (
         <p className="alert ">Aucun element trouvée !</p>
       )}

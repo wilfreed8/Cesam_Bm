@@ -1,7 +1,7 @@
 const Logo = () => {
   return (
     <div
-      className="flex flex-row   bg-transparent items-center text-center justify-between  bg-transaprent gap-1 ml-2 "
+      className="flex flex-row   bg-transparent  items-center text-center justify-between  bg-transaprent gap-1 ml-2 "
       data-theme="light"
     >
       <img
@@ -9,7 +9,7 @@ const Logo = () => {
         alt="logocesam"
         width={24}
         height={24}
-        className="w-6 h-6 md:w-8 md:h-8  "
+        className="w-6 h-6 md:w-8 md:h-8  bg-transparent "
       />
       <h1
         className=" text-lg flex md:text-3xl font-bold  first-letter:text-2xl    bg-clip-text text-transparent"

@@ -1,12 +1,15 @@
 import { FaFacebookF, FaTwitter, FaLinkedinIn, FaWhatsapp } from "react-icons/fa";
 import { TfiEmail  } from "react-icons/tfi";
 import { Link } from "react-router-dom";
+import { FloatingDockDemo } from "./FloatingDockDemo";
 
 export default function Footer() {
   return (
     <footer className="bg-slate-50 w-screen text-gray-800  border-blue px-6 py-10 mt-5">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
-        
+        <div className="fixed bottom-35 right-8 md:left-0 md:right-0 md:bottom-8 z-10">
+          <FloatingDockDemo />
+          </div>
         {/* Bloc Logo / Description */}
         <div>
           <h2 className="text-2xl font-bold text-blue-600 mb-2">CESAM Beni-Mellal</h2>
@@ -37,11 +40,11 @@ export default function Footer() {
         <div>
           <h3 className="text-lg font-semibold mb-2">Suivez-nous</h3>
           <div className="flex gap-4 text-xl">
-            <a href="https://www.facebook.com/share/1MSR8UhYGS/" className="hover:text-blue-400"><FaFacebookF /></a>
-            <a href="https://www.instagram.com/cesambeni?igsh=MXJpem1pODRxdmV2bg==" className="hover:text-blue-300"><FaTwitter /></a>
-            <a href="" className="hover:text-blue-500 "><FaWhatsapp /></a>
-            <a href="mailto:cesam.beni.mellal@gmail.com" className="hover:text-blue-500"><TfiEmail /></a>
-            <a href="https://www.linkedin.com/in/cesam-b%C3%A9ni-mellal-91947434a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" className="hover:text-blue-500"><FaLinkedinIn /></a>
+            <a target="_blank" href="https://www.facebook.com/share/1MSR8UhYGS/" className="hover:text-blue-400"><FaFacebookF /></a>
+            <a target="_blank" href="https://www.instagram.com/cesambeni?igsh=MXJpem1pODRxdmV2bg==" className="hover:text-blue-300"><FaTwitter /></a>
+            <a target="_blank" href="" className="hover:text-blue-500 "><FaWhatsapp /></a>
+            <a target="_blank" href="mailto:cesam.beni.mellal@gmail.com" className="hover:text-blue-500"><TfiEmail /></a>
+            <a target="_blank" href="https://www.linkedin.com/in/cesam-b%C3%A9ni-mellal-91947434a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" className="hover:text-blue-500"><FaLinkedinIn /></a>
           </div>
         </div>
       </div>

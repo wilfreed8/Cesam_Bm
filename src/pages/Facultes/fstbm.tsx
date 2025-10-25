@@ -8,6 +8,7 @@ import { motion } from "framer-motion";
 import { Bounce, toast, ToastContainer } from "react-toastify";
 import { mip } from "@/lib/mip";
 import { ge_gm } from "@/lib/ge_gm";
+import { CoolMode } from "@/components/ui/cool-mode";
 
 //import { type } from "os";
 //import { useDeviceType } from "../useDeviceType";
@@ -46,6 +47,7 @@ export default function DocuFac() {
         <div className="relative ">
           <div>
             <div>
+              <CoolMode>
               <div className="dropdown mb-10  z-10">
                 <div
                   tabIndex={0}
@@ -83,6 +85,7 @@ export default function DocuFac() {
                   ))}
                 </ul>
               </div>
+              </CoolMode>
             </div>
           </div>
           <div className="relative ">

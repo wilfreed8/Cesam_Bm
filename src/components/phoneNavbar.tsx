@@ -5,7 +5,8 @@ import Logo from "./ui/logo";
 const phoneNavbar = () => {
 
 
-  let location = useLocation();
+  // eslint-disable-next-line react-hooks/rules-of-hooks
+  const location = useLocation();
 
   const closeDrawer = () => {
     const drawer = document.getElementById("my-drawer-3") as HTMLInputElement;
@@ -13,7 +14,7 @@ const phoneNavbar = () => {
   };
 
   return (
-    <div className=" w-screen backdrop-blur-lg sticky top-0 z-50">
+    <div className=" w-screen backdrop-blur-lg fixed top-0 z-50 ">
       <div className="drawer ">
         <input id="my-drawer-3" type="checkbox" className="drawer-toggle" />
         <div className="drawer-content flex flex-col">
@@ -46,14 +47,14 @@ const phoneNavbar = () => {
                 <div className="flex justify-between flex-col md:flex-row w-full">
                   <ul className="menu menu-horizontal flex just">
                     {/* Navbar menu content here */}
-                    <div className="menu menu-horizontal md:mr-70 gap-10">
+                    <div className="menu menu-horizontal md:mr-70 gap-10 text-pretty ">
                       <li>
                         <Link
                           to="/Home"
                           className={clsx(
-                            "btn btn-ghost btn-info w-40 md:w-auto p-1  md:p-4 font-bold md:text-xl text-sm rounded-0 md:rounded-lg hover:text-white transition-colors duration-200",
+                            "btn btn-ghost btn-info w-40 md:w-auto p-1  md:p-4 font-medium md:text-xl text-sm rounded-0 md:rounded-lg hover:text-white transition-colors duration-200",
                             {
-                              "hover:text-white bg-blue-800  text-white":
+                              " bg-blue-500  text-white":
                                 location.pathname === "/Home",
                             }
                           )}
@@ -65,9 +66,9 @@ const phoneNavbar = () => {
                         <Link
                           to="/Etudiant/fstbm"
                           className={clsx(
-                            "btn btn-ghost btn-info w-40 md:w-auto  p-1 md:p-4 font-bold hover:text-white md:text-xl text-sm rounded-0 md:rounded-lg transition-colors duration-200",
+                            "btn btn-ghost btn-info w-40 md:w-auto  p-1 md:p-4 font-medium hover:text-white md:text-xl text-sm rounded-0 md:rounded-lg transition-colors duration-200",
                             {
-                              "hover:text-white bg-blue-800 text-white":
+                              " bg-blue-500 text-white":
                               location.pathname.includes("/Etudiant"),
                             }
                           )}
@@ -79,9 +80,9 @@ const phoneNavbar = () => {
                         <Link
                           to="/About"
                           className={clsx(
-                            "btn btn-ghost btn-info w-40 md:w-auto p-1 md:p-4 font-bold md:text-xl hover:text-white text-sm rounded-0 md:rounded-lg transition-colors duration-200",
+                            "btn btn-ghost btn-info w-40 md:w-auto p-1 md:p-4 font-medium md:text-xl hover:text-white text-sm rounded-0 md:rounded-lg transition-colors duration-200",
                             {
-                              "hover:text-white bg-blue-800 text-white ":
+                              " bg-blue-500 text-white font ":
                                 location.pathname === "/About",
                             }
                           )}
@@ -120,7 +121,7 @@ const phoneNavbar = () => {
                 className={clsx(
                   "btn btn-soft rounded-md btn-info w-full hover:text-white transition-colors duration-200  p-1   font-semibold  text-sm ",
                   {
-                    "hover:text-white bg-blue-800 btn-primary text-white":
+                    "hover:text-white bg-blue-500 btn-primary text-white":
                       location.pathname === "/Home",
                   }
                 )}
@@ -136,7 +137,7 @@ const phoneNavbar = () => {
                 className={clsx(
                   "btn btn-soft btn-info  rounded-md w-full hover:text-white transition-colors duration-200  p-1   font-semibold  text-sm",
                   {
-                    "hover:text-white bg-blue-800  btn-primary text-white":
+                    "hover:text-white bg-blue-500  btn-primary text-white":
                       location.pathname.includes("/Etudiant") ,
                   }
                 )}
@@ -152,7 +153,7 @@ const phoneNavbar = () => {
                 className={clsx(
                   "btn btn-soft btn-info  rounded-md w-full hover:text-white transition-colors duration-200  p-1   font-semibold  text-sm",
                   {
-                    "hover:text-white bg-blue-800  btn-primary text-white py-0":
+                    "hover:text-white bg-blue-500  btn-primary text-white py-0":
                       location.pathname === "/About",
                   }
                 )}

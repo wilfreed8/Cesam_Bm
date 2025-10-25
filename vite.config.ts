@@ -16,7 +16,10 @@ export default defineConfig({
     outDir: 'dist',
   },
   server: {
-    host: true
+    host: true,
+     allowedHosts: [
+      'epiphloedal-precomprehensive-georgina.ngrok-free.dev'
+    ]
   },
   
 
